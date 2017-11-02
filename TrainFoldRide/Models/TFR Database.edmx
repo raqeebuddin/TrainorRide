@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TFRModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Station">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naptanId" Type="nvarchar(max)" />
+          <Property Name="station" Type="nvarchar(max)" />
+          <Property Name="icsId" Type="nvarchar(max)" />
+          <Property Name="depStation" Type="nvarchar(max)" />
+          <Property Name="arrStation" Type="nvarchar(max)" />
+          <Property Name="fare" Type="nvarchar(max)" />
+          <Property Name="CaloriesBurned" Type="int" />
+        </EntityType>
+        <EntityContainer Name="TFRModelStoreContainer">
+          <EntitySet Name="Station" EntityType="Self.Station" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TFRModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Station">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="naptanId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="station1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="icsId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="depStation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="arrStation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fare" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CaloriesBurned" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="TFREntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Stations" EntityType="Self.Station" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TFRModelStoreContainer" CdmEntityContainer="TFREntities2">
+          <EntitySetMapping Name="Stations">
+            <EntityTypeMapping TypeName="TFRModel.Station">
+              <MappingFragment StoreEntitySet="Station">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="naptanId" ColumnName="naptanId" />
+                <ScalarProperty Name="station1" ColumnName="station" />
+                <ScalarProperty Name="icsId" ColumnName="icsId" />
+                <ScalarProperty Name="depStation" ColumnName="depStation" />
+                <ScalarProperty Name="arrStation" ColumnName="arrStation" />
+                <ScalarProperty Name="fare" ColumnName="fare" />
+                <ScalarProperty Name="CaloriesBurned" ColumnName="CaloriesBurned" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

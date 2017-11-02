@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TFRModelStoreContainer" CdmEntityContainer="TFREntities2">
+    <EntitySetMapping Name="Stations">
+      <EntityTypeMapping TypeName="TFRModel.Station">
+        <MappingFragment StoreEntitySet="Station">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="naptanId" ColumnName="naptanId" />
+          <ScalarProperty Name="station1" ColumnName="station" />
+          <ScalarProperty Name="icsId" ColumnName="icsId" />
+          <ScalarProperty Name="depStation" ColumnName="depStation" />
+          <ScalarProperty Name="arrStation" ColumnName="arrStation" />
+          <ScalarProperty Name="fare" ColumnName="fare" />
+          <ScalarProperty Name="CaloriesBurned" ColumnName="CaloriesBurned" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,62 @@
+﻿@model TrainFoldRide.Models.SearchStations
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Search page</title>
+</head>
+<body>
+
+    @using (Html.BeginForm())
+    {
+       
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal col-md-8">
+            <div class="col-lg-12 title">
+                <h2>Plan Journey</h2>
+            </div>
+            <div class="text-danger">
+                @ViewBag.depStations
+            </div>
+            <hr />
+            <div class="form-group">
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.depStation, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Departure Station"} })
+                    @Html.ValidationMessageFor(model => model.depStation, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.arrStation, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Arrival Station" } })
+                    @Html.ValidationMessageFor(model => model.arrStation, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    <input type="submit" value="Search" class="btn btn-warning btn-lg" />
+                </div>
+                <div class ="col-md-10">
+                    <br />
+                    @Html.ActionLink("Previous Journeys", "StoredJourneys", null, new { @class = "btn btn-warning btn-lg" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div>
+                <br /><br /> <br/>
+            <p>Type in a TFL destination and arrival station e.g Kings cross and Stratford. 
+                <br /><br />See how many calories you burn, time and money you save while experiencing London in a different way </p>
+            </div>
+        </div>
+    }
+
+    
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TFRModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Station">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naptanId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="station1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="icsId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="depStation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="arrStation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="fare" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CaloriesBurned" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="TFREntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Stations" EntityType="Self.Station" />
+  </EntityContainer>
+</Schema>

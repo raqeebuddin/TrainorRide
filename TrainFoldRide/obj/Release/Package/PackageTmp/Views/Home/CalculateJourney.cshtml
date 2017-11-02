@@ -1,0 +1,46 @@
+﻿@model TrainFoldRide.Models.Journey
+@{
+    ViewBag.Title = "CalculateJourney";
+}
+    <div>
+        <div class="col-lg-12 title">
+            <h2>Train</h2>
+        </div>
+        <p>From: <strong> @ViewBag.departure</strong></p> 
+        <p>To: <strong>@ViewBag.arrival</strong></p> 
+        <p>Journey Duration: <strong>@Model.Legs[0].DurationHours hours @Model.Legs[0].DurationMinutes minutes</strong> </p>
+        Journey Route: 
+        @foreach (TrainFoldRide.Models.Leg leg in Model.Legs)
+        {
+            <p><strong>@leg.Instruction.Summary</strong></p>
+        }
+        <hr/>
+    </div>
+        <div class="col-lg-12">
+            <h2>or</h2>
+        </div>
+    <div>
+        <hr />
+        <div class="col-lg-12 title">
+            <h2>Ride</h2>
+        </div>
+        <p>Journey Distance:  <strong>@Model.CycleLegs[0].Distance</strong> Km</p>
+        <p>Journey Duration:  <strong>@Model.CycleLegs[0].DurationHours hour @Model.CycleLegs[0].DurationMinutes minutes</strong></p>
+        Journey Route:
+        @foreach (TrainFoldRide.Models.Leg leg in Model.CycleLegs)
+        {
+            <p><strong>@leg.Instruction.Summary</strong></p>
+        }
+        <p>Money saved = <strong>@ViewBag.price</strong></p>
+        <p>Calories burned = <strong>@ViewBag.calories</strong></p>
+
+        <div class="col-md-10">
+            <br />
+            @Html.ActionLink("Plan Journey", "Index", null, new { @class = "btn btn-warning btn-lg" })
+        </div>
+        <div class="col-md-10">
+            <br />
+            @Html.ActionLink("Previous Journeys", "StoredJourneys", null, new { @class = "btn btn-warning btn-lg" })
+        </div>
+    </div>
+  

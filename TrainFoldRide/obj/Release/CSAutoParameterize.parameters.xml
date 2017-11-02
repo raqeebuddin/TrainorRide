@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="TFREntities-Web.config Connection String" description="TFREntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.tfrDb.csdl|res://*/Models.tfrDb.ssdl|res://*/Models.tfrDb.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\TFR.mdf;integrated security=True;connect timeout=30;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\NARC\\source\\repos\\TrainFoldRide\\TrainFoldRide\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TFREntities']/@connectionString" />
+  </parameter>
+  <parameter name="TFREntities1-Web.config Connection String" description="TFREntities1 Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.TFRdatabase.csdl|res://*/Models.TFRdatabase.ssdl|res://*/Models.TFRdatabase.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\TFR.mdf;integrated security=True;connect timeout=30;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\NARC\\source\\repos\\TrainFoldRide\\TrainFoldRide\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TFREntities1']/@connectionString" />
+  </parameter>
+  <parameter name="TFREntities2-Web.config Connection String" description="TFREntities2 Connection String used in web.config by the application to access the database." defaultValue="metadata=&quot;res://*/Models.TFR Database.csdl|res://*/Models.TFR Database.ssdl|res://*/Models.TFR Database.msl&quot;;provider=System.Data.SqlClient;provider connection string='data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=&quot;C:\Users\NARC\Desktop\TFR Data Base\TFR.mdf&quot;;integrated security=True;connect timeout=30;MultipleActiveResultSets=True;App=EntityFramework'" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\NARC\\source\\repos\\TrainFoldRide\\TrainFoldRide\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TFREntities2']/@connectionString" />
+  </parameter>
+</parameters>

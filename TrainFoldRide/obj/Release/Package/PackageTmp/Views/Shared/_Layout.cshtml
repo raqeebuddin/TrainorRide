@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - TRAIN or RIDE</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("TRAIN or RIDE", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Plan Journey", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Previous Journeys", "StoredJourneys", "Home")</li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+    <div id="headerwrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<h1>Explore the City<br/>
+					in a different way.</h1>
+					@*<form class="form-inline" role="form">
+					  <div class="form-group">
+					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
+					  </div>
+					  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
+					</form>*@					
+				</div><!-- /col-lg-6 -->
+				<div class="col-lg-6">
+					<img class="img-responsive" src="~/img/torLogo.png" alt="">
+				</div><!-- /col-lg-6 -->
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /headerwrap-->
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <br />
+    <div class="col-lg-12">
+        <div class="row">
+            <footer>
+                <p class="centered"> Created by: RAQEEB UDDIN for more visit raqeebuddin.co.uk</p>
+            </footer>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

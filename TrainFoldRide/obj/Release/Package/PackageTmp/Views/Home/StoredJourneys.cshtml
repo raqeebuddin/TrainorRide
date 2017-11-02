@@ -1,0 +1,50 @@
+﻿@model IEnumerable<TrainFoldRide.Models.Station>
+
+@{
+    ViewBag.Title = "Previous Journeys";
+}
+
+<div class="col-lg-12 title">
+    <h2>Previous Journeys</h2>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.depStation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arrStation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fare)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CaloriesBurned)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(m => item.depStation)
+            </td>
+
+            <td>
+                @Html.DisplayFor(m => item.arrStation)
+            </td>
+
+            <td>
+                @Html.DisplayFor(m => item.fare)
+            </td>
+
+            <td>
+                @Html.DisplayFor(m => item.CaloriesBurned)
+            </td>
+            <td>
+                @Html.ActionLink("Delete Journey", "Delete", new { id = item.id }, new { @class = "btn btn-warning btn-lg" })
+            </td>
+        </tr>
+    }
+</table>
+

@@ -1,0 +1,40 @@
+﻿@model TrainFoldRide.Models.Station
+
+@{
+    ViewBag.Title = "Delete Journey";
+}
+
+<h2>Delete Journey</h2>
+<p> Are you sure you want to Delete this Journey?</p>
+
+<dl>
+    <dt>
+        @Html.DisplayNameFor(j => j.depStation)
+    </dt>
+    <dd>
+        @Html.DisplayFor(j=> j.depStation)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(j => j.arrStation)
+    </dt>
+    <dd>
+        @Html.DisplayFor(j => j.arrStation)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(j => j.fare)
+    </dt>
+    <dd>
+        @Html.DisplayFor(j => j.fare)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(j => j.CaloriesBurned)
+    </dt>
+    <dd>
+        @Html.DisplayFor(j => j.CaloriesBurned)
+    </dd>
+</dl>
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete Journey" class="btn btn-warning btn-lg"/>
+    @Html.ActionLink("Back to Previous Journeys", "StoredJourneys", null, new { @class = "btn btn-warning btn-lg" })
+}
